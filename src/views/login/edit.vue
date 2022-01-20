@@ -27,6 +27,12 @@ export default class loginEdit extends Vue {
   }
 
   login() {
+    this.$store.dispatch("user/phoneLogin", {
+      phone: this.edit.phone,
+      password: this.edit.password
+    }).then((data) => {
+      console.log("login data ??", data)
+    })
     this.$http.post("/login/cellphone", {
       phone: this.edit.phone,
       password: this.edit.password
@@ -37,7 +43,4 @@ export default class loginEdit extends Vue {
 }
 </script>
 <style scoped lang="scss">
-  .loginEdit {
-    border: 1px solid red;
-  }
 </style>

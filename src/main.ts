@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import axios from './api/index'
 import "./permission"
+import "./api-config"
 
 // import Vant from 'vant'
 import '@/assets/css/common.scss'
