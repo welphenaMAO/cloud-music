@@ -9,7 +9,7 @@ interface gettersType {
 const getters: gettersType = {
   token: state => state.user.token,
   avater: state => state.user.avater,
-  name: state => state.user.name,
+  name: state => state.user.name
 }
 
 export default getters

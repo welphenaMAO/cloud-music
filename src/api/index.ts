@@ -13,7 +13,7 @@ axios.interceptors.request.use(
   (config): AxiosRequestConfig<any> => {
     const token = window.sessionStorage.getItem('token')
 
-    if (token) {
+    if(token) {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       config.headers.token = token

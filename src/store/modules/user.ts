@@ -30,12 +30,16 @@ const mutations = {
 
 const actions = {
   // phone login
-  phoneLogin({ commit }, data: any) {
+  phoneLogin({ commit }: any, data: any) {
     return new Promise<void>((resolve, reject) => {
       phoneLogin(data)
-        .then(({ token, profile: { name } }) => {
+        // @ts-ignore
+        .then(({data: {token, profile: {nickname,avatarUrl}}}: any) => {
+          console.log('token ??', token)
+          console.log("profile name ??", nickname)
           commit('SET_TOKEN', token)
-          commit('SET_NAME', name)
+          commit('SET_NAME', nickname)
+          commit('SET_AVATAR', avatarUrl)
           setToken(token)
           resolve()
         })

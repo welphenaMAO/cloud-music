@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
 import Login from '@/views/login/index.vue'
 import LoginEdit from '@/views/login/edit.vue'
+import modules from './modules/index'
 
 Vue.use(VueRouter)
 interface routerFace {
@@ -35,7 +36,8 @@ const routes: Array<RouteConfig> = [
         meta: { title: 'loginEdit' }
       }
     ]
-  }
+  },
+  ...modules
 ]
 
 const createRouter = () => new VueRouter({

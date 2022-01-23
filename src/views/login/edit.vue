@@ -27,18 +27,21 @@ export default class loginEdit extends Vue {
   }
 
   login() {
-    this.$store.dispatch("user/phoneLogin", {
-      phone: this.edit.phone,
-      password: this.edit.password
-    }).then((data) => {
+    this.$store.dispatch("user/phoneLogin", this.edit).then((data) => {
       console.log("login data ??", data)
+      console.log("登陆成功...")
+
+      setTimeout(() => {
+        window.location.href = '/'
+      }, 1000)
+      console.log()
     })
-    this.$http.post("/login/cellphone", {
-      phone: this.edit.phone,
-      password: this.edit.password
-    }).then((res: any) => {
-      console.log('login res ??', res)
-    })
+    // this.$http.post("/login/cellphone", {
+    //   phone: this.edit.phone,
+    //   password: this.edit.password
+    // }).then((res: any) => {
+    //   console.log('login res ??', res)
+    // })
   }
 }
 </script>

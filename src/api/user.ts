@@ -4,14 +4,14 @@ interface PhoneParams {
   phone: number | string
   password: string | any
   countrycode?: string | number
-  md5_password?: string | number // 使用password将失效
+  md5Password?: string | number // 使用password将失效
   captcha?: number | string
 }
 
 interface EmailParams {
   email: string | any
   password: string | any
-  md5_password?: string | number // 使用password将失效
+  md5Password?: string | number // 使用password将失效
 }
 
 interface QrCodeParams {
@@ -45,7 +45,7 @@ export function generateQrCode(data: QrCodeParams): Promise<any> {
 // 二维码检测扫码状态
 // 二维码过期: 800  等待扫码: 801  待确认: 802  授权登录成功(会返回cookies): 803
 export function getQrCodeState(data: { key: string }): Promise<any> {
-  return axios.get('/login/qr/check?'+ data)
+  return axios.get('/login/qr/check?' + data)
 }
 
 // 刷脸登录
