@@ -1,6 +1,6 @@
 <template>
   <div class="navBar">
-    <van-nav-bar title="首页" fixed @click-left="onClickLeft">
+    <van-nav-bar :title="title" fixed @click-left="onClickLeft">
         <template #left>
           <van-icon name="arrow-left" size="18" />
         </template>
@@ -16,6 +16,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator"
 import { NavBar, Icon } from 'vant'
+import json from "@/configs/app.jsonc"
 
 @Component({
   components: {
@@ -25,6 +26,7 @@ import { NavBar, Icon } from 'vant'
 })
 
 export default class navBar extends Vue {
+  title = document.title
   onClickLeft() {
     console.log("route ??", this.$route)
     // this.$router.go(-1)
@@ -35,9 +37,13 @@ export default class navBar extends Vue {
     console.log("from ??", from)
     console.log("next ??", next)
   }
+
+  beforeMount() {
+    console.log("json 数据呀 ??", json)
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/variables";
+  @import "../../../assets/css/variables";
 </style>

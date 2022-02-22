@@ -6,11 +6,13 @@ module.exports = {
   extends: [
     'plugin:vue/essential',
     '@vue/standard',
-    '@vue/typescript/recommended'
+    // '@vue/typescript/recommended',
+    "plugin:jsonc/recommended-with-jsonc",
   ],
   parserOptions: {
     ecmaVersion: 2020
   },
+  // parser: "@babel/eslint-parser",
   rules: {
     "dot-notation": 1,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
@@ -78,5 +80,11 @@ module.exports = {
     // camelcase: ["error", {
     //   "properties": "never"
     // }]
-  }
+  },
+  overrides: [
+    {
+      files: ["*.json", "*.jsonc", "*.json5"],
+      parser: "jsonc-eslint-parser"
+    }
+  ]
 }

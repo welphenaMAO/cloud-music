@@ -7,13 +7,9 @@
 <script>
 import { NavBar, TabBar, AppMain } from './components'
 export default {
-    name: '',
-
-    props: {
-
-    },
+    name: "Layout",
     components: {
-
+      NavBar
     },
     data() {
         return {

@@ -67,20 +67,22 @@ export default class Login extends Vue {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 1000px;
+    height: 100%;
     background: url('../../assets/images/login/bg.jpg') no-repeat center/cover;
+    box-sizing: border-box;
     .logo {
       width: 80px;
       height: 80px;
       min-width: 80px;
       min-height: 80px;
-      margin: auto auto 80px;
+      margin: auto;
       border-radius: 50%;
       overflow: hidden;
       box-sizing: border-box;
     }
 
     .main {
+      margin: 50px auto 150px;
       li {
         margin: 0 20px 30px;
         &:last-child {
@@ -99,7 +101,7 @@ export default class Login extends Vue {
       .otherList {
         display: flex;
         justify-content: center;
-        margin: 50px auto 30px;
+        margin: 30px auto;
         li {
           margin: 0 20px;
         }

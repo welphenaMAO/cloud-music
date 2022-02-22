@@ -30,7 +30,7 @@ export default class tabBar extends Vue {
 </script>
 
 <style lang="scss" scoped>
-  @import "../../assets/css/variables";
+  @import "../../../assets/css/variables";
   .van-tabbar-item--active {
     color: $mainColor
   }

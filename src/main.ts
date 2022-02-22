@@ -5,6 +5,7 @@ import store from './store'
 import axios from './api/index'
 import "./permission"
 import "./api-config"
+// const json5 = require('json5')
 
 // import Vant from 'vant'
 import '@/assets/css/common.scss'

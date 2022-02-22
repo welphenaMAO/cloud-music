@@ -1,0 +1,32 @@
+{
+  "NavBar": {
+    "show": true, // 是否显示navBar
+    "title": "默认标题", // 默认navBar的title
+    "leftText": "", // 默认navBar左边显示的文本
+    "leftArrow": true, // 默认是否显示返回箭头
+    "rightIcon": "", // 默认navBar右边显示的icon
+    "border": true, // 默认是否显示border
+    "safeAreaInsetTop": false
+  },
+  "TabBar": {
+    "show": true, // 是否显示 tabBar
+    "border": true, // 是否显示tabBar的border
+    "activeColor": "#1989fa", // tabBar 激活颜色
+    "inactiveColor": "#7d7e80", // tabBar 未激活的颜色
+    "safeAreaInsetBottom": false,
+    "list": [ // tabBar 的数据项
+      {
+        "key": "HOME", // 后面会根据 key 来对每一项进行设置
+        "title": "主页", // tabBar 每一项的title
+        "icon": "home-o", // tabBar 每一项的icon
+        "path": "/home" // tabBar 每一项的绑定的route path
+      },
+      {
+        "key": "ABOUT",
+        "title": "我的",
+        "icon": "setting-o",
+        "path": "/about"
+      }
+    ]
+  }
+}

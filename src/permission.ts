@@ -13,11 +13,11 @@ router.beforeEach(async (to, from, next) => {
     // await store.dispatch('')
     next()
   } else {
-    if(to.path === "/login/edit/phone") {
+    if(to.path === "/login") {
       next()
     } else {
       next({
-        path: "/login/edit/phone",
+        path: "/login",
         replace: true
       })
     }
